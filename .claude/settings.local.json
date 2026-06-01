@@ -26,7 +26,12 @@
       "Bash(curl -s -X POST localhost:3210/api/waitlist -H 'Content-Type: application/json' -d '{\"email\":\"nope\",\"role\":\"researcher\"}' -w \" [%{http_code}]\\\\n\")",
       "Bash(curl -s -X POST localhost:3210/api/waitlist -H 'Content-Type: application/json' -d '{\"email\":\"a@b.com\",\"role\":\"hacker\"}' -w \" [%{http_code}]\\\\n\")",
       "Bash(curl -s -X POST localhost:3210/api/waitlist -H 'Content-Type: application/json' -d '{\"email\":\"bot@x.com\",\"role\":\"researcher\",\"company_url\":\"http://spam\"}' -w \" [%{http_code}]\\\\n\")",
-      "Bash(rm -rf /tmp/ds_pptx /tmp/datsift_unpacked; echo \"temp cleaned\")"
+      "Bash(rm -rf /tmp/ds_pptx /tmp/datsift_unpacked; echo \"temp cleaned\")",
+      "Bash(grep -E \"apps/web\\($|/\\)\")",
+      "Bash(gh repo *)",
+      "Bash(git rm *)",
+      "Bash(rm -rf apps/web/.git)",
+      "Bash(git add *)"
     ]
   }
 }

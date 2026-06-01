@@ -1,0 +1,87 @@
+@import "tailwindcss";
+
+/*
+ * DataSift AI design tokens.
+ * Palette: deep "ink" base with a teal/mint signal accent — trust + data +
+ * health, deliberately not generic SaaS blue. One accent dominates; the dark
+ * surface carries the visual weight.
+ */
+@theme {
+  --color-ink: #070a12;
+  --color-ink-2: #0c111d;
+  --color-surface: #111827;
+  --color-line: #1e2940;
+  --color-line-soft: #161f33;
+  --color-fog: #97a2bc;
+  --color-fog-2: #6b7794;
+  --color-mist: #e9edf7;
+  --color-mint: #2dd4bf;
+  --color-mint-bright: #5eead4;
+  --color-mint-deep: #0e6f6a;
+
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-fraunces), Georgia, "Times New Roman", serif;
+}
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-ink);
+  color: var(--color-mist);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  /* Subtle dot-grid motif: signal emerging from noise. */
+  background-image:
+    radial-gradient(circle at 50% -10%, rgba(45, 212, 191, 0.12), transparent 45%),
+    radial-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+  background-size: 100% 100%, 26px 26px;
+  background-attachment: fixed;
+}
+
+/* Reusable accents */
+.text-gradient {
+  background: linear-gradient(120deg, var(--color-mint-bright), #8ab4ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.hairline {
+  border: 1px solid var(--color-line);
+}
+
+.card-glow {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0)) ,
+    var(--color-ink-2);
+}
+
+.fade-up {
+  animation: fadeUp 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .fade-up {
+    animation: none;
+  }
+}
