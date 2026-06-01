@@ -1,0 +1,32 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//Users/ashishmac/Library/Application Support/Claude/local-agent-mode-sessions/skills-plugin/992adf32-8710-4e88-8911-97f5d14ddc41/1d47f3d4-a882-486b-82bd-9265ec08b245/skills/pptx/**)",
+      "Bash(./extract-text \"/Users/ashishmac/Desktop/DataShift/DatSift AI Pitch.pptx\")",
+      "Bash(python3 '/Users/ashishmac/Library/Application Support/Claude/local-agent-mode-sessions/skills-plugin/992adf32-8710-4e88-8911-97f5d14ddc41/1d47f3d4-a882-486b-82bd-9265ec08b245/skills/pptx/scripts/office/unpack.py' '/Users/ashishmac/Desktop/DataShift/DatSift AI Pitch.pptx' /tmp/datsift_unpacked/)",
+      "Read(//tmp/datsift_unpacked/ppt/**)",
+      "Bash(npm -v)",
+      "Bash(echo \"npm: $\\(npm -v 2>/dev/null || echo MISSING\\)\")",
+      "Bash(git --version)",
+      "Bash(echo \"git: $\\(git --version 2>/dev/null || echo MISSING\\)\")",
+      "Bash(npx --yes create-next-app@latest apps/web --typescript --tailwind --eslint --app --src-dir --import-alias \"@/*\" --no-turbopack --use-npm)",
+      "Bash(npx --yes create-next-app@latest /Users/ashishmac/Desktop/DataShift/apps/web --typescript --tailwind --eslint --app --src-dir --import-alias \"@/*\" --no-turbopack --use-npm)",
+      "Bash(node -e \"const p=require\\('./package.json'\\);console.log\\('next',p.dependencies.next,'| tailwind',\\(p.devDependencies.tailwindcss||p.dependencies.tailwindcss\\)\\)\")",
+      "Bash(sed -n '1,70p' 01-getting-started/15-route-handlers.md)",
+      "Bash(sed -n '1,55p' 01-getting-started/14-metadata-and-og-images.md)",
+      "Bash(npx tsc *)",
+      "Bash(echo \"=== TSC DONE \\(exit $?\\) ===\")",
+      "Bash(npx next *)",
+      "Bash(npm run *)",
+      "Bash(lsof -ti:3210)",
+      "Bash(xargs kill -9)",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(curl -s -X POST localhost:3210/api/waitlist -H 'Content-Type: application/json' -d '{\"email\":\"dr.smith@university.edu\",\"role\":\"researcher\",\"note\":\"YRBS + state PNA data\"}' -w \" [%{http_code}]\\\\n\")",
+      "Bash(curl -s -X POST localhost:3210/api/waitlist -H 'Content-Type: application/json' -d '{\"email\":\"dr.smith@university.edu\",\"role\":\"researcher\"}' -w \" [%{http_code}]\\\\n\")",
+      "Bash(curl -s -X POST localhost:3210/api/waitlist -H 'Content-Type: application/json' -d '{\"email\":\"nope\",\"role\":\"researcher\"}' -w \" [%{http_code}]\\\\n\")",
+      "Bash(curl -s -X POST localhost:3210/api/waitlist -H 'Content-Type: application/json' -d '{\"email\":\"a@b.com\",\"role\":\"hacker\"}' -w \" [%{http_code}]\\\\n\")",
+      "Bash(curl -s -X POST localhost:3210/api/waitlist -H 'Content-Type: application/json' -d '{\"email\":\"bot@x.com\",\"role\":\"researcher\",\"company_url\":\"http://spam\"}' -w \" [%{http_code}]\\\\n\")",
+      "Bash(rm -rf /tmp/ds_pptx /tmp/datsift_unpacked; echo \"temp cleaned\")"
+    ]
+  }
+}
